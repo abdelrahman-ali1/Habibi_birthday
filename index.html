@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Intro Screen -->
+    <div id="intro" class="intro">
+        <div id="heart" class="heart"></div>
+        <p class="tap-text">اضغطي على القلب يا قلبي ♥</p>
+    </div>
+
+    <!-- Hidden Content -->
+    <div id="mainContent" class="hidden">
+
+        <audio id="song" src="song.mp3"></audio>
+        <!-- ارفع الأغنية باسم song.mp3 في نفس الفولدر -->
+
+        <!-- Section 1 - Photo -->
+        <div class="section hidden-section" id="sec1">
+            <img src="your-photo.jpg" class="main-photo" alt="Us">
+        </div>
+
+        <!-- Section 2 - Message -->
+        <div class="section hidden-section" id="sec2">
+            <div class="msg-box">
+                <p class="message">
+                    يا من سكنت القلب والروح،
+قد وجدت فيك ضياء حياتي ودفءَ أيامي، وكنت أنت الوصال الذي طالما تمنيتُه.
+لا يمر يوم إلا وتزداد محبتك في نفسي، كأن قلبي يكتب باسمك في كل نبضة.
+يا زهرة عمري، يا سر سعادتي، أسأل الله أن يظلَّ حبنا مزهرًا، لا يذبل، وقلوبنا على عهدها دائمًا. ❤️  
+                   
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 3 - Memories -->
+        <div class="section hidden-section" id="sec3">
+            <h2 class="title">ذكرياتنا ❤️</h2>
+
+            <div class="memory">
+                <h3>احسن يوم في حياتي ا</h3>
+                <p>17 / 9/ 2022</p>
+            </div>
+
+            <div class="memory">
+                <h3>اول مره قولتلك بحبك فيها </h3>
+                <p>1 / 10/ 2022</p>
+            </div>
+
+            <div class="memory">
+                <h3>أجمل يوم قضيناه سوا</h3>
+                <p>29 / 11/ 2025</p>
+            </div>
+        </div>
+
+        <!-- Section 4 - Surprise Button -->
+        <div class="section hidden-section" id="sec4">
+            <button id="surpriseBtn" class="btn-surprise">مفاجأة تانية ✨</button>
+            <div id="surpriseContent" class="hidden">
+                <p class="message">كل سنة وانتي أجمل شيء في حياتي ❤️</p>
+                <img src="surprise.jpg" class="main-photo" alt="Surprise" />
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Canvas for confetti and hearts -->
+    <canvas id="confettiCanvas" class="full-canvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
