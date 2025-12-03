@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: "Cairo", sans-serif;
+    background: #0d001a;
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Canvas */
+.full-canvas {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Intro */
+.intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tap-text {
+    margin-top: 20px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+/* Heart */
+.heart {
+    width: 140px;
+    height: 140px;
+    background: red;
+    position: relative;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    animation: heartbeat 1.2s infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    width: 140px;
+    height: 140px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart:before {
+    top: -70px;
+    left: 0;
+}
+
+.heart:after {
+    left: 70px;
+    top: 0;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1) rotate(-45deg); }
+    50% { transform: scale(1.2) rotate(-45deg); }
+    100% { transform: scale(1) rotate(-45deg); }
+}
+
+.hidden {
+    display: none;
+}
+
+.section {
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.section.show {
+    opacity: 1;
+}
+
+/* Photo */
+.main-photo {
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #b600ff;
+}
+
+/* Message */
+.msg-box {
+    background: #18002d;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #7a00a8;
+}
+
+.message {
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+/* Memories */
+.title {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.memory {
+    background: #2d0147;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #8a00cf;
+}
+
+/* Surprise Button */
+.btn-surprise {
+    background: linear-gradient(45deg,#c58be9,#7b1fa2);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 12px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-surprise:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
